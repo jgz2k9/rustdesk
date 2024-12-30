@@ -6,7 +6,7 @@ on:
 
 jobs:
   run-flutter-nightly-build:
-    uses: ./.github/workflows/android-only-manual.yml 
+    uses: ./.github/workflows/android-only.yml 
     secrets: inherit
     with:
       upload-artifact: true
