@@ -127,11 +127,6 @@ class MainActivity : FlutterActivity() {
                     Intent(activity, MainService::class.java).also {
                         bindService(it, serviceConnection, Context.BIND_AUTO_CREATE)
                     }
-                    if (MainService.isReady) {
-                        result.success(false)
-                        return@setMethodCallHandler
-                    }
-                    requestMediaProjection()
                     result.success(true)
                 }
                 "start_capture" -> {
